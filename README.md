@@ -81,11 +81,11 @@ cp .env.example .env
 ```bash
 # From Supabase Settings → API
 NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGc... # Also in Supabase Settings → API
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
+SUPABASE_SERVICE_ROLE_KEY=<your-supabase-service-role-key> # Also in Supabase Settings → API
 
 # From Groq console
-GROQ_API_KEY=gsk_...
+GROQ_API_KEY=<your-groq-api-key>
 
 # Generate this with: openssl rand -base64 32
 NEXTAUTH_SECRET=your_random_secret_here

@@ -45,7 +45,7 @@ Wait 2-3 minutes for packages to download.
 2. Click "API"
 3. Copy these TWO things:
    - Project URL (looks like: https://abcdefgh.supabase.co)
-   - anon public key (long string starting with eyJ...)
+   - anon public key (long JWT-style string)
    - service_role key (another long string, find it below)
 
 ### Step 4: Get Groq API Key (5 minutes)
@@ -55,7 +55,7 @@ Wait 2-3 minutes for packages to download.
 3. Click "API Keys" in left sidebar
 4. Click "Create API Key"
 5. Give it a name: "interview-prep"
-6. Copy the key (starts with gsk_)
+6. Copy the Groq API key
 7. **IMPORTANT: Save it somewhere safe - you can't see it again!**
 
 ### Step 5: Create .env File (3 minutes)
@@ -69,13 +69,13 @@ Wait 2-3 minutes for packages to download.
 NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
 
 # Paste your Supabase anon key here
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
 
 # Paste your Supabase service role key here
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...
+SUPABASE_SERVICE_ROLE_KEY=<your-supabase-service-role-key>
 
 # Paste your Groq API key here
-GROQ_API_KEY=gsk_xxxxx
+GROQ_API_KEY=<your-groq-api-key>
 
 # Generate a random secret (instructions below)
 NEXTAUTH_SECRET=put_random_string_here
@@ -150,7 +150,7 @@ npm install
 
 ### Error: "Groq API error"
 - Check your Groq API key in `.env`
-- Make sure it starts with `gsk_`
+- Make sure the key is correct and has no extra spaces or quotes
 - Verify you're not hitting rate limits (free tier = 30 requests/min)
 
 ### Error: "Port 3000 already in use"

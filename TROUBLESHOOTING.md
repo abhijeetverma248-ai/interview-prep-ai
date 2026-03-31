@@ -42,11 +42,11 @@ ls -la | grep .env
 **Check .env format (NO quotes, NO spaces):**
 ```bash
 # WRONG
-GROQ_API_KEY = "gsk_xxxxx"
+GROQ_API_KEY = "<your-groq-api-key>"
 NEXT_PUBLIC_SUPABASE_URL="https://xxx.supabase.co"
 
 # CORRECT
-GROQ_API_KEY=gsk_xxxxx
+GROQ_API_KEY=<your-groq-api-key>
 NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
 ```
 
@@ -110,7 +110,7 @@ DROP TABLE IF EXISTS profiles CASCADE;
 ### "API key invalid"
 
 **Check format:**
-- Should start with `gsk_`
+- Should be a valid Groq API key
 - No spaces before/after
 - No quotes
 
